@@ -12,15 +12,21 @@ import burger from '../public/menu.svg';
 import instaimg from '../public/instagramnewv1.png';
 import facebookimg from '../public/facebook--v1.png';
 import linkedinimg from '../public/linkedin.svg';
+import x from '../public/x.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
 useEffect( () => {
         const btn = document.querySelector('.mobile-button');
+        const x = document.querySelector('.mobile-x-button');
         const sidebar = document.querySelector('.sidebar');
 
         btn.addEventListener('click', () => {
+          sidebar.classList.toggle('-translate-x-full');
+        });
+
+        x.addEventListener('click', () => {
           sidebar.classList.toggle('-translate-x-full');
         });
 });
@@ -33,6 +39,7 @@ AOS.init();
                     md:flex 
                     m-0 
                     p-0">
+                    
     {/* mobile menu */}
       <div className='bg-gray-800 
                       text-gray-100 
@@ -43,9 +50,10 @@ AOS.init();
                       top-0
                       z-10
                       '>
-<div id='#hero' className='p-4'>
+<div id='#hero' className='p-4 focus:outline-none 
+                           px-5'>
           <img 
-               className='
+               className='rounded-full
                           h-9
                           w-9
                           hover:bg-[#5b5b5b]
@@ -62,6 +70,7 @@ AOS.init();
                            focus:outline-none 
                            focus:bg-gray-700
                            hover:bg-gray-100
+                           hover:bg-opacity-20
                            transition
                            px-5
                            '>
@@ -77,8 +86,8 @@ AOS.init();
       </div>
 
         <div 
-        className=" sidebar
-                     z-20
+        className=" sidebar 
+                    z-20
                   border-blue-50 
                   text-blue-50 
                     w-33
@@ -91,8 +100,23 @@ AOS.init();
                     duration-200
                     ease-in-out
                     md:translate-x-0
+
                     ">
 
+<button className='flex justify-end'>
+  <img src={x} alt="" 
+       className='x-color 
+                  mobile-x-button 
+                  transition hover 
+                  w-6
+                  h-6
+                  text-end
+                  justify-end
+                  flex
+                  object-right
+                  ml-40
+                  ' />
+</button>
 
           <a href="">
           <img data-aos="fade-zoom-in"

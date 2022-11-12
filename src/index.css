@@ -63,6 +63,11 @@ body {
 
 }
 
+.x-color {
+  filter: invert(53%) sepia(24%) saturate(5290%) hue-rotate(150deg) brightness(97%) contrast(101%);
+
+}
+
 .russel-email {
   transform: rotate(90deg);
   transition: 0.3s;
