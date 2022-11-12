@@ -12,6 +12,7 @@ import burger from '../public/menu.svg';
 import instaimg from '../public/instagramnewv1.png';
 import facebookimg from '../public/facebook--v1.png';
 import linkedinimg from '../public/linkedin.svg';
+import resumecvpdf from '../public/resumecv.pdf'
 import x from '../public/x.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -239,8 +240,8 @@ AOS.init();
      data-aos-delay="700"
      data-aos-duration="500">
 
-  <a href='../public/resumecv.pdf' 
-     target={'../public/resumecv.pdf'}>
+  <a href={resumecvpdf} 
+     target={resumecvpdf}>
 
     <button className='     font-courier 
                             transition
